@@ -1,0 +1,39 @@
+[gd_scene load_steps=4 format=3 uid="uid://iy3c3bkrxaf"]
+
+[ext_resource type="Texture2D" uid="uid://pfjj4edibvbq" path="res://barSprites.png" id="1_6k8ks"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c1fje"]
+texture = ExtResource("1_6k8ks")
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+4:5/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_hcjci"]
+sources/0 = SubResource("TileSetAtlasSource_c1fje")
+
+[node name="Node2D" type="TileMap"]
+tile_set = SubResource("TileSet_hcjci")
+format = 2
+
+[node name="Layer0" type="TileMapLayer" parent="."]
+use_parent_material = true
+tile_set = SubResource("TileSet_hcjci")
+
+[node name="Layer1" type="TileMapLayer" parent="."]
+use_parent_material = true
+tile_set = SubResource("TileSet_hcjci")
