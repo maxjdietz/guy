@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://benigtawnluq8"]
+
+[ext_resource type="Texture2D" uid="uid://bbdrlap6a5rig" path="res://bardecalsV2.png" id="1_o5n0h"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gx7q8"]
+atlas = ExtResource("1_o5n0h")
+region = Rect2(0, 32, 48, 78)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_o4l3e"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gx7q8")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+scale = Vector2(6.68, 6.68)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_o4l3e")

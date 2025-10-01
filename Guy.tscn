@@ -87,9 +87,10 @@ script = ExtResource("1_hkse0")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true
+y_sort_enabled = true
 sprite_frames = SubResource("SpriteFrames_8o6b7")
 animation = &"walk"
-frame_progress = 0.332452
+frame_progress = 0.630892
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 13)

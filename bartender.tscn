@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://i3h3w4xx5mvd"]
+
+[ext_resource type="Texture2D" uid="uid://pfjj4edibvbq" path="res://barSprites.png" id="1_2scdx"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bpjrc"]
+atlas = ExtResource("1_2scdx")
+region = Rect2(48, 87, 16, 29)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yq5vr"]
+atlas = ExtResource("1_2scdx")
+region = Rect2(48, 84, 16, 28)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_do5qa"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bpjrc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yq5vr")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Bartender" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_do5qa")
