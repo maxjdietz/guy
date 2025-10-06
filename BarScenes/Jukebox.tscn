@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://cjujip17wy7q8"]
+[gd_scene load_steps=12 format=3 uid="uid://ch7pci0egierl"]
 
 [ext_resource type="Script" uid="uid://hqmsvpw0wq0r" path="res://jukebox.gd" id="1_c16kg"]
 [ext_resource type="Texture2D" uid="uid://b4f1jfu1lb8n4" path="res://SpriteSheets/JukeBoxJiggy.png" id="1_u3ngx"]

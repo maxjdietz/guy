@@ -35,10 +35,11 @@ texture = ExtResource("1_yfdcc")
 sources/0 = SubResource("TileSetAtlasSource_eg73j")
 
 [node name="Overworld" type="Node2D"]
+position = Vector2(0, -10)
 scale = Vector2(6.96646, 6.69241)
 
 [node name="TileMap" type="TileMap" parent="."]
-scale = Vector2(1.62251, 1.62251)
+scale = Vector2(1.12297, 1.12297)
 format = 2
 
 [node name="Ground" type="TileMapLayer" parent="TileMap"]
@@ -48,12 +49,12 @@ tile_set = SubResource("TileSet_fslvj")
 
 [node name="barSprite" parent="." instance=ExtResource("1_eg73j")]
 position = Vector2(52.1068, -66.4932)
-scale = Vector2(4.43359, 4.43359)
+scale = Vector2(2.89479, 2.89479)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("3_fslvj")]
 position = Vector2(-158.761, 14.6434)
-scale = Vector2(1.8383, 1.8383)
+scale = Vector2(1.35599, 1.35599)
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 scale = Vector2(-0.0861266, -0.0861266)
-zoom = Vector2(0.4, 0.4)
+zoom = Vector2(0.3, 0.3)

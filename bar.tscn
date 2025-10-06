@@ -4,11 +4,11 @@
 [ext_resource type="Texture2D" uid="uid://b3sw648wqrl6v" path="res://SpriteSheets/bardecalsV2.png" id="2_d4kci"]
 [ext_resource type="Texture2D" uid="uid://bij40m67anki7" path="res://SpriteSheets/barSprites.png" id="2_sbg6f"]
 [ext_resource type="PackedScene" uid="uid://cqcnq6blvw8hv" path="res://Seat.tscn" id="3_fhoit"]
-[ext_resource type="PackedScene" uid="uid://ch7pci0egierl" path="res://Jukebox.tscn" id="4_d4kci"]
 [ext_resource type="PackedScene" uid="uid://cpb2a806ehl4o" path="res://Window1NPC.tscn" id="5_sao2x"]
 [ext_resource type="PackedScene" uid="uid://cq2sw6ibv86wq" path="res://PoolTable.tscn" id="6_sm06w"]
 [ext_resource type="PackedScene" uid="uid://d18rgjbtk5ir7" path="res://bartender.tscn" id="8_luqre"]
 [ext_resource type="Script" uid="uid://di0gnbd8edb53" path="res://leave.gd" id="9_47nkn"]
+[ext_resource type="PackedScene" uid="uid://ch7pci0egierl" path="res://BarScenes/Jukebox.tscn" id="10_d3clh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sbg6f"]
 texture = ExtResource("2_sbg6f")
@@ -29,7 +29,7 @@ texture = ExtResource("2_sbg6f")
 4:2/0 = 0
 5:2/0 = 0
 1:3/0 = 0
-1:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 4.96968, 5.05344, 4.91384, 5.05344, -8, 8, -8, 8, 8, -0.139598, 8, -8, 8)
+1:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -4.99558, -8, -4.9976, 5.02551, 8, 5.02551, 8, 8, -8, 8)
 2:3/0 = 0
 2:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 4.96968, 5.05344, 4.91384, 5.05344, -8, 8, -8, 8, 8, -0.139598, 8, -8, 8)
 4:3/0 = 0
@@ -38,7 +38,7 @@ texture = ExtResource("2_sbg6f")
 5:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(0.0837584, 5.13719, 8, 5.14396, 8, 8, 0.0837584, 8)
 0:4/0 = 0
 1:4/0 = 0
-1:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8.18042, -9.26928, -5.27679, -9.26928, -5.05343, -8, -5.16511, 8, -8, 8)
+1:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -4.99558, -8, -4.94176, 8, -8, 8)
 2:4/0 = 0
 2:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(5.05344, -8, 8, -8, 8, 8, 4.9976, 8)
 1:5/0 = 0
@@ -48,9 +48,9 @@ texture = ExtResource("2_sbg6f")
 4:5/0 = 0
 4:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 5.14396, 8, 5.14396, 8, 8, -8, 8)
 1:6/0 = 0
-1:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -8, 8, 8, -8, 8, -8, 5.36055, -8, -8, 5.16511, -8)
+1:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 5:6/0 = 0
-5:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -8, 8, 8, -8, 8, -8, 5.36055, -8, -8, 5.16511, -8)
+5:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-6.44941, -6.8682, -4.88592, -7.25908, 4.88592, -7.20324, 5.94686, -6.30981, 6.74484, -5.29042, 8, 8, -8, 8, -6.72861, -5.19303)
 1:7/0 = 0
 1:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -8, 8, 8, -8, 8, -8, 5.36055, -8, -8, 5.16511, -8)
 2:7/0 = 0
@@ -62,7 +62,7 @@ texture = ExtResource("2_sbg6f")
 5:7/0 = 0
 5:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -8, 8, 8, -8, 8, -8, 5.36055, -8, -8, 5.16511, -8)
 1:8/0 = 0
-1:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -8, 8, 8, -8, 8, -8, 5.36055, -8, -8, 5.16511, -8)
+1:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -4.94176, 7.42659, -6.56109, 6.47733, -6.7328, 4.74674)
 2:8/0 = 0
 2:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -8, 8, 8, -8, 8, -8, 5.36055, -8, -8, 5.16511, -8)
 3:8/0 = 0
@@ -70,7 +70,7 @@ texture = ExtResource("2_sbg6f")
 4:8/0 = 0
 4:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -8, 8, 8, -8, 8, -8, 5.36055, -8, -8, 5.16511, -8)
 5:8/0 = 0
-5:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -8, 8, 8, -8, 8, -8, 5.36055, -8, -8, 5.16511, -8)
+5:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 7.11948, 4.858, 6.33773, 6.58901, 4.94176, 7.09156, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sao2x"]
 texture = ExtResource("2_d4kci")
@@ -101,13 +101,8 @@ sources/1 = SubResource("TileSetAtlasSource_sao2x")
 
 [node name="Node2D" type="Node2D"]
 y_sort_enabled = true
-position = Vector2(-160, 654)
+position = Vector2(-161, 654)
 scale = Vector2(6.48, 6.48)
-
-[node name="JukeBox" parent="." instance=ExtResource("4_d4kci")]
-z_index = 1
-position = Vector2(104.938, -14.3519)
-scale = Vector2(1.38053, 1.38053)
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_a0eh7")
@@ -126,7 +121,9 @@ tile_map_data = PackedByteArray("AAD2////AAABAAQAAAD2/wAAAAABAAQAAAD2/wEAAAABAAQ
 tile_set = SubResource("TileSet_a0eh7")
 
 [node name="Seats" type="Node2D" parent="."]
-position = Vector2(-2.46914, 0.154321)
+z_index = 1
+y_sort_enabled = true
+position = Vector2(-2.46914, 5.70988)
 
 [node name="Seat1" parent="Seats" instance=ExtResource("3_fhoit")]
 position = Vector2(-82.0988, 38.1173)
@@ -185,6 +182,9 @@ offset_bottom = 133.494
 scale = Vector2(0.277777, 0.277777)
 text = "press 'E' to leave bar"
 
-[connection signal="body_entered" from="Leave" to="JukeBox" method="_on_leave_body_entered"]
+[node name="Jukebox" parent="." instance=ExtResource("10_d3clh")]
+z_index = 1
+position = Vector2(106.019, -17.7469)
+
 [connection signal="body_entered" from="Leave" to="Leave" method="_on_body_entered"]
 [connection signal="body_exited" from="Leave" to="Leave" method="_on_body_exited"]
