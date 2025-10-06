@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cv1p6i5jr2elg"
-path="res://.godot/imported/JukeBoxJiggy.png-06b44c6d67db19184779837647c655d1.ctex"
+uid="uid://bceno4avpsf1d"
+path="res://.godot/imported/guySprites-Sheet-Sheet.png-a3b0a60b27edfcf5ecb270189c4c34b8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://JukeBoxJiggy.png"
-dest_files=["res://.godot/imported/JukeBoxJiggy.png-06b44c6d67db19184779837647c655d1.ctex"]
+source_file="res://SpriteSheets/guySprites-Sheet-Sheet.png"
+dest_files=["res://.godot/imported/guySprites-Sheet-Sheet.png-a3b0a60b27edfcf5ecb270189c4c34b8.ctex"]
 
 [params]
 

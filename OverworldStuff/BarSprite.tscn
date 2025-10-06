@@ -1,0 +1,67 @@
+[gd_scene load_steps=7 format=3 uid="uid://i3hn3nvihlsh"]
+
+[ext_resource type="Script" uid="uid://b1sjgplri27g0" path="res://OverworldStuff/bar_sprite.gd" id="1_5kqwg"]
+[ext_resource type="Texture2D" uid="uid://b7ygjnkr28r6a" path="res://SpriteSheets/OverWorldTileSet.png" id="1_xtb3n"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eh708"]
+atlas = ExtResource("1_xtb3n")
+region = Rect2(64, 82, 64, 41)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8mypc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eh708")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xtb3n"]
+radius = 4.8778
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5kqwg"]
+size = Vector2(20, 26.6164)
+
+[node name="barSprite" type="Node2D"]
+script = ExtResource("1_5kqwg")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+unique_name_in_owner = true
+visible = false
+z_index = 1
+offset_left = -17.0
+offset_top = -6.0
+offset_right = 112.0
+offset_bottom = 34.0
+scale = Vector2(0.28, 0.28)
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Press' E' to enter"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_8mypc")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 19)
+scale = Vector2(4.16, 1.6)
+shape = SubResource("CircleShape2D_xtb3n")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, -0.5)
+scale = Vector2(3.3202, 1.46526)
+shape = SubResource("RectangleShape2D_5kqwg")
+
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://pfjj4edibvbq"
-path="res://.godot/imported/barSprites.png-c40e5b1f3998420dc5ada523c8d0aef1.ctex"
+uid="uid://b7ygjnkr28r6a"
+path="res://.godot/imported/OverWorldTileSet.png-1b4cabdc4bb9ea4bbcd4a942786fba21.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://barSprites.png"
-dest_files=["res://.godot/imported/barSprites.png-c40e5b1f3998420dc5ada523c8d0aef1.ctex"]
+source_file="res://SpriteSheets/OverWorldTileSet.png"
+dest_files=["res://.godot/imported/OverWorldTileSet.png-1b4cabdc4bb9ea4bbcd4a942786fba21.ctex"]
 
 [params]
 

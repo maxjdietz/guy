@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://ch7pci0egierl"]
+[gd_scene load_steps=12 format=3 uid="uid://cjujip17wy7q8"]
 
 [ext_resource type="Script" uid="uid://hqmsvpw0wq0r" path="res://jukebox.gd" id="1_c16kg"]
 [ext_resource type="Texture2D" uid="uid://b4f1jfu1lb8n4" path="res://SpriteSheets/JukeBoxJiggy.png" id="1_u3ngx"]
@@ -47,7 +47,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Jiggy",
-"speed": 6.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -60,16 +60,31 @@ animations = [{
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_oyvgg"]
 
-[node name="CharacterBody2D" type="CharacterBody2D"]
-collision_layer = 2
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1g6kw"]
+
+[node name="Jukebox" type="CharacterBody2D"]
+collision_layer = 8
 script = ExtResource("1_c16kg")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true
 position = Vector2(0, -4)
 sprite_frames = SubResource("SpriteFrames_w05y1")
+animation = &"Jiggy"
+frame_progress = 0.307426
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 9)
+rotation = 3.14159
+scale = Vector2(1.25798, 0.839484)
+shape = SubResource("CircleShape2D_oyvgg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 9)
-scale = Vector2(-1.25798, -0.839484)
-shape = SubResource("CircleShape2D_oyvgg")
+position = Vector2(0, -3)
+shape = SubResource("CapsuleShape2D_1g6kw")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

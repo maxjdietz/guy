@@ -4,4 +4,3 @@
  - Made Jukebox mimic in Aseprite (45 minutes)
  - Godot tileset implementation for bar only with physics collision (30 minutes)
  - Created scene element for player (Guy) and animated him walking with player input. (30 minutes)
-

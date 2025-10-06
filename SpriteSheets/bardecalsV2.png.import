@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cjf3lrkb4wglm"
-path="res://.godot/imported/barSprites-Sheet.png-99e7f42f903354eb090f1a206c876640.ctex"
+uid="uid://b3sw648wqrl6v"
+path="res://.godot/imported/bardecalsV2.png-eb72349029bd48026228e096e52b877f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://barSprites-Sheet.png"
-dest_files=["res://.godot/imported/barSprites-Sheet.png-99e7f42f903354eb090f1a206c876640.ctex"]
+source_file="res://SpriteSheets/bardecalsV2.png"
+dest_files=["res://.godot/imported/bardecalsV2.png-eb72349029bd48026228e096e52b877f.ctex"]
 
 [params]
 

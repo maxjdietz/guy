@@ -1,6 +1,6 @@
 [gd_scene load_steps=14 format=3 uid="uid://bde5ims7r18k5"]
 
-[ext_resource type="Texture2D" uid="uid://b27d7o1m8uph1" path="res://guySprites-Sheet-Sheet.png" id="1_428ol"]
+[ext_resource type="Texture2D" uid="uid://bceno4avpsf1d" path="res://SpriteSheets/guySprites-Sheet-Sheet.png" id="1_428ol"]
 [ext_resource type="Script" uid="uid://buiyfof8o1h64" path="res://guy.gd" id="1_hkse0"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hkse0"]
@@ -90,7 +90,7 @@ unique_name_in_owner = true
 y_sort_enabled = true
 sprite_frames = SubResource("SpriteFrames_8o6b7")
 animation = &"walk"
-frame_progress = 0.630892
+frame_progress = 0.204821
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 13)

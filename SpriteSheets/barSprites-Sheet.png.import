@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b27d7o1m8uph1"
-path="res://.godot/imported/guySprites-Sheet-Sheet.png-bbdcfd21cc4f0365e99f17c1b08368f7.ctex"
+uid="uid://cxboy0pcuxi62"
+path="res://.godot/imported/barSprites-Sheet.png-4927dae753223f734536882214699751.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://guySprites-Sheet-Sheet.png"
-dest_files=["res://.godot/imported/guySprites-Sheet-Sheet.png-bbdcfd21cc4f0365e99f17c1b08368f7.ctex"]
+source_file="res://SpriteSheets/barSprites-Sheet.png"
+dest_files=["res://.godot/imported/barSprites-Sheet.png-4927dae753223f734536882214699751.ctex"]
 
 [params]
 
