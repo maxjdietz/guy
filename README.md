@@ -10,6 +10,16 @@
  - Made window in aseprite + godot implementation (20 minutes)
  - Made tweaks to collisions and layers (WIP) (10 minutes)
  - Bartender aseprite + Implementation (10 minutes)
+
+/////////////////////---------------PROJECT 5: ACCESSIBILITY + MENUS ----------------///////////////////////
+ - Reorganized files (not in godot, led to errors in references to certain sprite sheets, DON'T ORANIZE OUTSIDE OF GODOT) (1 hr)
+ - Fixed bar collisions (20 mins)
+ - Made Jukebox Jiggy play when you get close to it (10 mins)
+ - Made outside Tile Sets + Outside Bar Tile Sets (30 mins)
+ - Made main scene the overwolrd (outside) (5 mins)
+ - Made detection to enter bar (with interactive text) (10 mins)
+ - Made detection to exit the bar (with interactive text) (10 mins)
+ - Made transitions to scenes (player can now leave and enter the bar seemlessly) (30 mins)
    
    
    
