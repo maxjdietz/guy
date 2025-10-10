@@ -22,6 +22,12 @@
  - Made detection to enter bar (with interactive text) (10 mins)
  - Made detection to exit the bar (with interactive text) (10 mins)
  - Made transitions to scenes (player can now leave and enter the bar seemlessly) (30 mins)
+(PAST DUE DATE BECAUSE I SUCK)
+ - Created UI that includes: health, stamina, guy points, rpeputation, and curr objective (1.5 hours of UI shenanigans)
+ - Slight bug fixes (way more to come) (15 mins)
+ - Made a menu with animation and plays the game (no options menu) (30 mins)
+ - Made slight tutorial tweaks (10 mins)
+ 
    
    
    
