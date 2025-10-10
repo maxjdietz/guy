@@ -1,0 +1,120 @@
+[gd_scene format=3 uid="uid://ca6x8j7ym0qaf"]
+
+[node name="MainUI" type="Control"]
+custom_minimum_size = Vector2(1152, 648)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StaminaBar" type="ProgressBar" parent="."]
+custom_minimum_size = Vector2(50, 1)
+layout_mode = 2
+offset_left = 146.0
+offset_top = 21.0
+offset_right = 246.0
+offset_bottom = 51.0
+rotation = 1.57499
+scale = Vector2(1.09385, 0.515401)
+size_flags_horizontal = 0
+show_percentage = false
+
+[node name="Label" type="Label" parent="StaminaBar"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Stmina"
+
+[node name="health" type="ProgressBar" parent="."]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+offset_left = 28.0
+offset_top = 125.0
+offset_right = 128.0
+offset_bottom = 225.0
+rotation = -1.5622
+value = 0.07
+show_percentage = false
+
+[node name="Label" type="Label" parent="health"]
+layout_mode = 0
+offset_left = 93.0052
+offset_top = 0.200108
+offset_right = 145.005
+offset_bottom = 23.2001
+rotation = 1.41873
+text = "Health"
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -137.0
+offset_top = 23.0
+offset_right = -27.0
+offset_bottom = 127.0
+grow_horizontal = 0
+
+[node name="Panel" type="Panel" parent="GridContainer"]
+custom_minimum_size = Vector2(110, 50)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="guyPoints" type="Label" parent="GridContainer/Panel"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 14.0
+offset_right = 14.0
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "guy points"
+
+[node name="Panel2" type="Panel" parent="GridContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="Reputation" type="Label" parent="GridContainer/Panel2"]
+layout_mode = 2
+offset_left = 17.0
+offset_top = -1.0
+offset_right = 134.0
+offset_bottom = 22.0
+text = "reputation       "
+
+[node name="Panel" type="Panel" parent="."]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 34.0
+offset_top = -87.0
+offset_right = 134.0
+offset_bottom = -47.0
+grow_vertical = 0
+scale = Vector2(1.56, 1.56)
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 0.367647
+offset_top = -60.5882
+offset_right = 145.368
+offset_bottom = -37.5882
+grow_vertical = 0
+scale = Vector2(0.705882, 0.705882)
+text = "Current Objectives"
+
+[node name="Label2" type="Label" parent="Panel"]
+layout_mode = 0
+offset_top = 10.2564
+offset_right = 116.0
+offset_bottom = 33.2564
+scale = Vector2(0.820513, 0.820513)
+text = "* Go to the Bar"

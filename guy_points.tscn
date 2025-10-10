@@ -1,0 +1,41 @@
+[gd_scene load_steps=2 format=3 uid="uid://btyc3vfem6ihv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lrm1s"]
+bg_color = Color(4.04298e-06, 0.721553, 0.302908, 1)
+
+[node name="GuyPoints" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -712.0
+offset_top = 11.0
+offset_right = -662.0
+offset_bottom = 80.0
+grow_horizontal = 0
+scale = Vector2(13.48, 13.48)
+
+[node name="Panel" type="Panel" parent="VBoxContainer"]
+custom_minimum_size = Vector2(25, 15)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_lrm1s")
+
+[node name="Label" type="Label" parent="VBoxContainer/Panel"]
+layout_mode = 2
+offset_top = -141.0
+offset_right = 545.0
+offset_bottom = -4.00002
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 100
+text = "Guy Points:"
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -1,0 +1,279 @@
+[gd_scene load_steps=21 format=3 uid="uid://ck5oyfqu3p1iw"]
+
+[ext_resource type="Texture2D" uid="uid://bceno4avpsf1d" path="res://SpriteSheets/guySprites-Sheet-Sheet.png" id="1_dl586"]
+[ext_resource type="Script" uid="uid://den2nmdncge55" path="res://UI/start_menu.gd" id="1_f14c5"]
+[ext_resource type="Script" uid="uid://dlr2vuctvv5kt" path="res://UI/titleScreenAnimations.gd" id="1_q5qyg"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q5qyg"]
+bg_color = Color(0, 0, 0, 0.25098)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+
+[sub_resource type="Animation" id="Animation_f14c5"]
+resource_name = "Guy Transition"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("VBoxContainer:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0666667, 0.99, 1.59),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(425, 664), Vector2(425, 324), Vector2(425, 360)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Label:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.58, 2.1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(400, -317), Vector2(400, 78), Vector2(400, 37)]
+}
+
+[sub_resource type="Animation" id="Animation_dl586"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("VBoxContainer:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(435, 664)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Label:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(409, -317)]
+}
+
+[sub_resource type="Animation" id="Animation_q5qyg"]
+resource_name = "GuyWalk"
+length = 10.0
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_j3hi8"]
+_data = {
+&"Guy Transition": SubResource("Animation_f14c5"),
+&"GuyWalk": SubResource("Animation_q5qyg"),
+&"RESET": SubResource("Animation_dl586")
+}
+
+[sub_resource type="Animation" id="Animation_j3hi8"]
+resource_name = "guyWalk"
+length = 10.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-9, 0), Vector2(1300, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_neu3s"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-9, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rcgl7"]
+_data = {
+&"RESET": SubResource("Animation_neu3s"),
+&"guyWalk": SubResource("Animation_j3hi8")
+}
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_neu3s"]
+atlas = ExtResource("1_dl586")
+region = Rect2(0, 0, 16, 37)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rcgl7"]
+atlas = ExtResource("1_dl586")
+region = Rect2(16, 0, 16, 37)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yqwmv"]
+atlas = ExtResource("1_dl586")
+region = Rect2(32, 0, 16, 37)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2cbuu"]
+atlas = ExtResource("1_dl586")
+region = Rect2(48, 0, 16, 37)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_olsk0"]
+atlas = ExtResource("1_dl586")
+region = Rect2(64, 0, 16, 37)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2mdyt"]
+atlas = ExtResource("1_dl586")
+region = Rect2(80, 0, 16, 37)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_umcuc"]
+atlas = ExtResource("1_dl586")
+region = Rect2(96, 0, 16, 37)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uhcj7"]
+atlas = ExtResource("1_dl586")
+region = Rect2(112, 0, 16, 37)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wd76h"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_neu3s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rcgl7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yqwmv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2cbuu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_olsk0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2mdyt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_umcuc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uhcj7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="StartMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 11.0
+offset_top = 9.0
+offset_right = 11.0
+offset_bottom = 9.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_f14c5")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -9.0
+offset_top = -7.0
+offset_right = -9.0
+offset_bottom = -7.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_q5qyg")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+libraries = {
+&"": SubResource("AnimationLibrary_j3hi8")
+}
+autoplay = "Guy Transition"
+script = ExtResource("1_q5qyg")
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_rcgl7")
+}
+autoplay = "guyWalk"
+
+[node name="Label" type="Label" parent="."]
+z_index = 4
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 400.0
+offset_top = -317.0
+offset_right = 1308.0
+offset_bottom = 397.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.162217, 0.162217)
+theme_override_font_sizes/font_size = 1000
+text = "GUY"
+
+[node name="Node2D" type="Node2D" parent="."]
+z_index = 1
+position = Vector2(-9, 0)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D"]
+position = Vector2(-74, 276)
+scale = Vector2(4.71053, 4.71053)
+sprite_frames = SubResource("SpriteFrames_wd76h")
+autoplay = "default"
+frame_progress = 0.593408
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.698
+offset_left = -151.0
+offset_top = 340.0
+offset_right = 149.0
+offset_bottom = 505.696
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(200, 75)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 50
+text = "PLAY"
+
+[node name="Button2" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(200, 75)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 50
+text = "OPTIONS
+"
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]

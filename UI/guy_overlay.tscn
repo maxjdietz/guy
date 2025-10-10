@@ -1,0 +1,80 @@
+[gd_scene load_steps=5 format=3 uid="uid://e3v24sefg5dr"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hstw3"]
+bg_color = Color(0.226707, 0.226708, 0.226707, 1)
+border_width_top = 10
+border_width_right = 2
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jlreu"]
+bg_color = Color(0.6, 0.956863, 0.6, 1)
+border_width_left = 5
+border_width_top = 10
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5lnmd"]
+bg_color = Color(0.244776, 0.244776, 0.244776, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vas2d"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+
+[node name="GuyOverlay" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StaminaContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+offset_left = 427.0
+offset_top = 191.0
+offset_right = 527.0
+offset_bottom = 291.0
+scale = Vector2(7, 1)
+
+[node name="StaminaBar" type="ProgressBar" parent="StaminaContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_hstw3")
+theme_override_styles/fill = SubResource("StyleBoxFlat_jlreu")
+value = 50.0
+show_percentage = false
+
+[node name="healthContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 109.0
+offset_top = 416.0
+offset_right = 209.0
+offset_bottom = 516.0
+rotation = -1.5782
+scale = Vector2(3.4, 3.4)
+
+[node name="healthBar" type="ProgressBar" parent="healthContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_5lnmd")
+theme_override_styles/fill = SubResource("StyleBoxFlat_vas2d")
+value = 50.0
+show_percentage = false
+
+[node name="Label" type="Label" parent="healthContainer/healthBar"]
+layout_mode = 2
+offset_left = 121.92
+offset_top = 19.139
+offset_right = 221.92
+offset_bottom = 42.139
+rotation = -4.70368
+text = "Health"

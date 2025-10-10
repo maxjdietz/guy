@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=4 uid="uid://g8wpr44204i7"]
+[gd_scene load_steps=15 format=4 uid="uid://g8wpr44204i7"]
 
 [ext_resource type="PackedScene" uid="uid://bde5ims7r18k5" path="res://Guy.tscn" id="2_a0eh7"]
 [ext_resource type="Texture2D" uid="uid://b3sw648wqrl6v" path="res://SpriteSheets/bardecalsV2.png" id="2_d4kci"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cq2sw6ibv86wq" path="res://PoolTable.tscn" id="6_sm06w"]
 [ext_resource type="PackedScene" uid="uid://d18rgjbtk5ir7" path="res://bartender.tscn" id="8_luqre"]
 [ext_resource type="Script" uid="uid://di0gnbd8edb53" path="res://leave.gd" id="9_47nkn"]
+[ext_resource type="PackedScene" uid="uid://ca6x8j7ym0qaf" path="res://UI/actualGuyUI.tscn" id="10_84vuo"]
 [ext_resource type="PackedScene" uid="uid://ch7pci0egierl" path="res://BarScenes/Jukebox.tscn" id="10_d3clh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sbg6f"]
@@ -150,11 +151,12 @@ scale = Vector2(0.228395, 0.228395)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_a0eh7")]
 z_index = 1
-position = Vector2(-1.54321, 82.2531)
+position = Vector2(-18.0556, 81.6358)
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 position = Vector2(-2.20988, -2.19754)
 scale = Vector2(2.21605, 1.47531)
+zoom = Vector2(0.5, 0.5)
 
 [node name="PoolTable" parent="." instance=ExtResource("6_sm06w")]
 z_index = 1
@@ -169,7 +171,7 @@ collision_layer = 8
 script = ExtResource("9_47nkn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Leave"]
-position = Vector2(-18.2099, 107.407)
+position = Vector2(-18.0556, 114.506)
 scale = Vector2(0.654321, 1)
 shape = SubResource("CircleShape2D_luqre")
 
@@ -185,6 +187,10 @@ text = "press 'E' to leave bar"
 [node name="Jukebox" parent="." instance=ExtResource("10_d3clh")]
 z_index = 1
 position = Vector2(106.019, -17.7469)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="MainUI" parent="CanvasLayer" instance=ExtResource("10_84vuo")]
 
 [connection signal="body_entered" from="Leave" to="Leave" method="_on_body_entered"]
 [connection signal="body_exited" from="Leave" to="Leave" method="_on_body_exited"]
