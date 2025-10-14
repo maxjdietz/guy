@@ -132,3 +132,5 @@ libraries = {
 &"": SubResource("AnimationLibrary_32ipo")
 }
 autoplay = "tutorialMove"
+
+[connection signal="sprinting" from="guy" to="CanvasLayer/GuyUI" method="_on_guy_sprinting"]

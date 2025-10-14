@@ -1,4 +1,12 @@
-[gd_scene format=3 uid="uid://ca6x8j7ym0qaf"]
+[gd_scene load_steps=4 format=3 uid="uid://ca6x8j7ym0qaf"]
+
+[ext_resource type="Script" uid="uid://cienwt53sfuxm" path="res://UI/actual_guy_ui.gd" id="1_q5g0m"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q5g0m"]
+bg_color = Color(0.595943, 0.539892, 0.518803, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1nv8f"]
+bg_color = Color(0.196219, 0.698204, 0.510568, 1)
 
 [node name="MainUI" type="Control"]
 custom_minimum_size = Vector2(1152, 648)
@@ -8,17 +16,22 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_q5g0m")
 
 [node name="StaminaBar" type="ProgressBar" parent="."]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(50, 1)
 layout_mode = 2
-offset_left = 146.0
-offset_top = 21.0
-offset_right = 246.0
-offset_bottom = 51.0
-rotation = 1.57499
+offset_left = 135.0
+offset_top = 122.0
+offset_right = 235.0
+offset_bottom = 152.0
+rotation = 4.69568
 scale = Vector2(1.09385, 0.515401)
 size_flags_horizontal = 0
+theme_override_styles/background = SubResource("StyleBoxFlat_q5g0m")
+theme_override_styles/fill = SubResource("StyleBoxFlat_1nv8f")
+value = 100.0
 show_percentage = false
 
 [node name="Label" type="Label" parent="StaminaBar"]
@@ -47,7 +60,7 @@ offset_bottom = 23.2001
 rotation = 1.41873
 text = "Health"
 
-[node name="GridContainer" type="GridContainer" parent="."]
+[node name="GuyPts+Rep" type="GridContainer" parent="."]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -58,12 +71,12 @@ offset_right = -27.0
 offset_bottom = 127.0
 grow_horizontal = 0
 
-[node name="Panel" type="Panel" parent="GridContainer"]
+[node name="Panel" type="Panel" parent="GuyPts+Rep"]
 custom_minimum_size = Vector2(110, 50)
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="guyPoints" type="Label" parent="GridContainer/Panel"]
+[node name="guyPoints" type="Label" parent="GuyPts+Rep/Panel"]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
@@ -73,11 +86,11 @@ offset_bottom = 23.0
 grow_horizontal = 2
 text = "guy points"
 
-[node name="Panel2" type="Panel" parent="GridContainer"]
+[node name="Panel2" type="Panel" parent="GuyPts+Rep"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 
-[node name="Reputation" type="Label" parent="GridContainer/Panel2"]
+[node name="Reputation" type="Label" parent="GuyPts+Rep/Panel2"]
 layout_mode = 2
 offset_left = 17.0
 offset_top = -1.0
@@ -85,7 +98,7 @@ offset_right = 134.0
 offset_bottom = 22.0
 text = "reputation       "
 
-[node name="Panel" type="Panel" parent="."]
+[node name="CurrentObj" type="Panel" parent="."]
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 1
 anchors_preset = 2
@@ -98,7 +111,7 @@ offset_bottom = -47.0
 grow_vertical = 0
 scale = Vector2(1.56, 1.56)
 
-[node name="Label" type="Label" parent="Panel"]
+[node name="Label" type="Label" parent="CurrentObj"]
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
@@ -111,10 +124,14 @@ grow_vertical = 0
 scale = Vector2(0.705882, 0.705882)
 text = "Current Objectives"
 
-[node name="Label2" type="Label" parent="Panel"]
+[node name="Label2" type="Label" parent="CurrentObj"]
 layout_mode = 0
 offset_top = 10.2564
 offset_right = 116.0
 offset_bottom = 33.2564
 scale = Vector2(0.820513, 0.820513)
 text = "* Go to the Bar"
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
